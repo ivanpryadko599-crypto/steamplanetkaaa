@@ -1,0 +1,108 @@
+<!--
+  steamplanetkaaa - starter e-commerce site (catalog mockup)
+  Save as index.html and deploy (GitHub Pages / Netlify / etc.)
+-->
+
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SteamPlanetKAAA — Магазин</title>
+  <meta name="description" content="Официальный магазин SteamPlanetKAAA — цифровые товары, карточки, акции.">
+  <meta property="og:title" content="SteamPlanetKAAA">
+  <meta property="og:description" content="Магазин цифровых товаров и карточек">
+  <meta property="og:url" content="https://steamplanetkaaa.com">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0a74da">
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    :root{--accent:#0a74da;--bg:#0f1720;--card:#0b1220;--muted:#9aa6b2}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui;background:linear-gradient(180deg,var(--bg),#071025);color:#fff}
+    header{padding:28px 18px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;background:linear-gradient(135deg,var(--accent),#7bdff6);border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#002}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+    .hero{padding:48px 18px;text-align:center}
+    .hero h1{font-size:2.2rem;margin:0 0 8px}
+    .hero p{color:var(--muted);max-width:760px;margin:0 auto 18px}
+    .btn{display:inline-block;padding:10px 18px;border-radius:10px;background:var(--accent);color:#022;text-decoration:none;font-weight:600}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;padding:28px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.12));padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.05);display:flex;flex-direction:column;justify-content:space-between}
+    .price{font-weight:700;font-size:1.1rem;margin:12px 0;color:#fff}
+    footer{padding:28px 18px;color:var(--muted);font-size:0.95rem}
+    .container{max-width:1100px;margin:0 auto}
+    @media(min-width:900px){.hero h1{font-size:3rem}}
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="brand">
+      <div class="logo">SP</div>
+      <div>
+        <div style="font-weight:700">SteamPlanetKAAA</div>
+        <div style="font-size:0.85rem;color:var(--muted)">цифровой магазин</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#catalog">Каталог</a>
+      <a href="#about">О нас</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h1>Каталог SteamPlanetKAAA</h1>
+      <p>Популярные цифровые товары и игровые карточки. Макет витрины для старта — позже можно добавить корзину и оплату.</p>
+    </section>
+
+    <section id="catalog" class="container">
+      <div class="grid">
+        <article class="card">
+          <h3>Карточки Steam</h3>
+          <p style="color:var(--muted);">Цифровые карточки для обмена и коллекций.</p>
+          <div class="price">от 99 ₽</div>
+          <a class="btn" href="#">Купить</a>
+        </article>
+        <article class="card">
+          <h3>Пополнение кошелька</h3>
+          <p style="color:var(--muted);">Коды для пополнения баланса в Steam.</p>
+          <div class="price">от 300 ₽</div>
+          <a class="btn" href="#">Купить</a>
+        </article>
+        <article class="card">
+          <h3>Подарочные карты</h3>
+          <p style="color:var(--muted);">Удобный подарок для друзей и близких.</p>
+          <div class="price">от 500 ₽</div>
+          <a class="btn" href="#">Купить</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container" style="padding:0 18px 28px">
+      <div class="card">
+        <h2>О нас</h2>
+        <p style="color:var(--muted)">SteamPlanetKAAA — команда энтузиастов, делаем покупки цифровых товаров проще. Этот сайт — витрина-демо, где позже можно внедрить корзину, оплату и личный кабинет.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="container" style="padding:0 18px 48px">
+      <div class="card">
+        <h2>Связаться</h2>
+        <p style="color:var(--muted)">Email: <a href="mailto:support@steamplanetkaaa.com">support@steamplanetkaaa.com</a></p>
+        <p style="color:var(--muted)">Telegram: <a href="https://t.me/steamplanetkaaa">@steamplanetkaaa</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> SteamPlanetKAAA</div>
+      <div style="color:var(--muted)">Политика конфиденциальности · Условия использования</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
